@@ -18,6 +18,21 @@ Requirements:
 Target features become usable only after the corresponding slice is implemented and
 verified against its seeded issue and milestone acceptance criteria.
 
+## clamp
+
+`index.js` exports a small `clamp(value, min, max)` helper:
+
+```js
+import { clamp } from "./index.js";
+
+clamp(5, 0, 10);     // 5
+clamp(-3, 0, 10);    // 0
+clamp(42, 0, 10);    // 10
+clamp(-10, -5, -1);  // -5
+clamp(7, 3, 3);      // 3
+clamp(5, 10, 0);     // throws RangeError: clamp: min (10) must not be greater than max (0)
+```
+
 ## Verification
 
 These commands verify the bootstrap scaffold only; they do not verify the planned features.
