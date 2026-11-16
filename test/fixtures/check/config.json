@@ -1,0 +1,15 @@
+{
+  "commands": {
+    "usage": { "argv": ["{node}", "usage.mjs"], "effects": "none" },
+    "version": { "argv": ["{node}", "version.mjs"], "effects": "none" },
+    "fail": { "argv": ["{node}", "fail.mjs"], "effects": "none" },
+    "effects": { "argv": ["{node}", "effects.mjs"], "effects": "none" }
+  },
+  "regions": {
+    "usage": { "command": "usage" }
+  },
+  "facts": [
+    { "id": "version", "text": "version 1.2.3", "file": "package.json", "json": "version", "equals": "1.2.3" },
+    { "id": "license", "text": "Released under the MIT license.", "file": "LICENSE", "contains": "MIT License" }
+  ]
+}

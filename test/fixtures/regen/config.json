@@ -1,0 +1,10 @@
+{
+  "commands": {
+    "usage": { "argv": ["node", "usage.mjs"], "effects": "none" },
+    "version": { "argv": ["node", "version.mjs"], "effects": "none" }
+  },
+  "regions": {
+    "usage": { "command": "usage" },
+    "version": { "command": "version" }
+  }
+}

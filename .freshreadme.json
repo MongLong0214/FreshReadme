@@ -1,0 +1,28 @@
+{
+  "commands": {
+    "help": {
+      "argv": ["node", "bin/freshreadme.js", "--help"],
+      "effects": "none"
+    }
+  },
+  "regions": {
+    "usage": {
+      "command": "help"
+    }
+  },
+  "facts": [
+    {
+      "id": "node-version",
+      "text": "Node.js >=20",
+      "file": "package.json",
+      "json": "engines.node",
+      "equals": ">=20"
+    },
+    {
+      "id": "effects-note",
+      "text": "effects: none is a declaration, not a guarantee: FreshReadme compares the repository tree before and after a command runs, so it misses changes made after that comparison (for example by processes the command leaves running) and changes undone before it; it is not a sandbox and does not prevent writes elsewhere.",
+      "file": "src/runner.js",
+      "contains": "effects: none is a declaration, not a guarantee: FreshReadme compares the repository tree before and after a command runs, so it misses changes made after that comparison (for example by processes the command leaves running) and changes undone before it; it is not a sandbox and does not prevent writes elsewhere."
+    }
+  ]
+}

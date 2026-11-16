@@ -1,4 +1,7 @@
 {
+  "bin": {
+    "freshreadme": "bin/freshreadme.js"
+  },
   "engines": {
     "node": ">=20"
   },
@@ -6,7 +9,7 @@
   "name": "FreshReadme",
   "private": true,
   "scripts": {
-    "test": "node --test"
+    "test": "node --test && node bin/freshreadme.js check"
   },
   "type": "module",
   "version": "0.1.0"
